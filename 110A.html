@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9 nömrəli məktəb - 110A sinfi</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#1e40af',secondary:'#4f46e5'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+background-color: #f8fafc;
+}
+.table-container {
+overflow-x: auto;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+}
+th {
+position: sticky;
+top: 0;
+background-color: #1e40af;
+color: white;
+z-index: 10;
+}
+tr:nth-child(even) {
+background-color: #f1f5f9;
+}
+tr:hover {
+background-color: #e2e8f0;
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Nav Bar -->
+<nav class="fixed top-0 w-full bg-gradient-to-r from-primary to-secondary text-white shadow-lg z-50">
+<div class="px-4 py-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center backdrop-blur-sm">
+<i class="ri-government-fill text-2xl"></i>
+</div>
+<div>
+<h1 class="text-lg font-semibold tracking-wide">Təhsil Nazirliyi</h1>
+<p class="text-sm opacity-90">9 nömrəli məktəb</p>
+</div>
+</div>
+<div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center backdrop-blur-sm">
+<i class="ri-notification-3-line text-xl"></i>
+</div>
+</div>
+<div class="mt-3 pt-3 border-t border-white/20 grid grid-cols-2 gap-4 text-sm">
+<div class="flex items-center space-x-2">
+<div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center backdrop-blur-sm">
+<i class="ri-user-star-line"></i>
+</div>
+<div>
+<p class="text-xs opacity-75">Direktor</p>
+<p class="font-medium">Sevər Ağayeva</p>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center backdrop-blur-sm">
+<i class="ri-team-line"></i>
+</div>
+<div>
+<p class="text-xs opacity-75">Sinif rəhbəri</p>
+<p class="font-medium">Günəl Həsənzadə</p>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-24 pb-20 px-4">
+<!-- Designer & Developer Section -->
+<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 mb-8">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-semibold text-gray-800">Layihə komandası</h3>
+<div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+<i class="ri-team-line text-primary text-xl"></i>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-start space-x-3">
+<div class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center">
+<i class="ri-palette-line text-primary text-xl"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-800">Dizayner</h4>
+<p class="text-sm text-gray-500 mt-1">Rəhimzadə Ümid</p>
+<div class="flex items-center space-x-2 mt-2">
+<div class="w-6 h-6 bg-gray-50 rounded flex items-center justify-center">
+<i class="ri-behance-line text-gray-600"></i>
+</div>
+<div class="w-6 h-6 bg-gray-50 rounded flex items-center justify-center">
+<i class="ri-dribbble-line text-gray-600"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<div class="w-12 h-12 bg-secondary/5 rounded-xl flex items-center justify-center">
+<i class="ri-code-s-slash-line text-secondary text-xl"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-800">Developer</h4>
+<p class="text-sm text-gray-500 mt-1">Ağayev İbrahim</p>
+<div class="flex items-center space-x-2 mt-2">
+<div class="w-6 h-6 bg-gray-50 rounded flex items-center justify-center">
+<i class="ri-github-line text-gray-600"></i>
+</div>
+<div class="w-6 h-6 bg-gray-50 rounded flex items-center justify-center">
+<i class="ri-linkedin-line text-gray-600"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Header Section -->
+<div class="mb-8 text-center">
+<h2 class="text-3xl font-bold bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">110A Sinfi</h2>
+<p class="text-gray-500 mt-2 text-sm tracking-wide">Şagirdlərin nəticələri - 2025</p>
+<div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mt-3"></div>
+</div>
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 gap-4 mb-6">
+<div class="bg-gradient-to-r from-primary to-secondary rounded-xl p-5 text-white">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-semibold">Sinif lideri</h3>
+<div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center backdrop-blur-sm">
+<i class="ri-trophy-fill text-xl"></i>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<div class="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center backdrop-blur-sm">
+<i class="ri-user-star-fill text-3xl"></i>
+</div>
+<div>
+<h4 class="text-xl font-bold">Nəzərli Uğur</h4>
+<p class="text-sm opacity-90">685 bal</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+<div class="flex items-center space-x-3 mb-3">
+<div class="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center">
+<i class="ri-arrow-up-circle-fill text-green-500 text-xl"></i>
+</div>
+<p class="text-sm text-gray-600">Hədəfi keçən</p>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-1">Feyzili Tərlan</h4>
+<p class="text-green-500 font-medium">+85 bal</p>
+</div>
+</div>
+<div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+<div class="flex items-center space-x-3 mb-3">
+<div class="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center">
+<i class="ri-rocket-fill text-secondary text-xl"></i>
+</div>
+<p class="text-sm text-gray-600">Ən çox artım</p>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-1">Həsənzadə Rza</h4>
+<p class="text-secondary font-medium">+120 bal</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Table Section -->
+<div class="bg-white rounded shadow-md overflow-hidden mb-6">
+<div class="p-4 bg-primary text-white">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-semibold">Şagirdlərin siyahısı</h3>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-list-check-2 ri-lg"></i>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="text-sm">İmtahan:</span>
+<select id="examSelect" class="bg-white/10 text-white text-sm rounded px-2 py-1 border border-white/20">
+<option value="all">Bütün imtahanlar</option>
+<option value="exam1">Sınaq 1</option>
+<option value="exam2">Buraxılış</option>
+<option value="exam3">Blok</option>
+</select>
+</div>
+<div class="text-sm">
+Ortalama: <span id="averageScore" class="font-semibold">604</span> bal
+</div>
+</div>
+</div>
+<div class="table-container">
+<table class="w-full">
+<thead>
+<tr>
+<th class="py-3 px-4 text-left">#</th>
+<th class="py-3 px-4 text-left">Ad Soyad</th>
+<th class="py-3 px-4 text-center">Sınaq 1</th>
+<th class="py-3 px-4 text-center">Buraxılış</th>
+<th class="py-3 px-4 text-center">Blok</th>
+<th class="py-3 px-4 text-center">Cəmi</th>
+<th class="py-3 px-4 text-center">Hədəf</th>
+<th class="py-3 px-4 text-center">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="py-3 px-4">1</td>
+<td class="py-3 px-4 font-medium">Əliyev Rəhim</td>
+<td class="py-3 px-4 text-center">215</td>
+<td class="py-3 px-4 text-center">185</td>
+<td class="py-3 px-4 text-center">198</td>
+<td class="py-3 px-4 text-center font-medium">598</td>
+<td class="py-3 px-4 text-center">550</td>
+<td class="py-3 px-4 text-center"><span class="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Keçdi</span></td>
+</tr>
+<tr>
+<td class="py-3 px-4">2</td>
+<td class="py-3 px-4 font-medium">Məmmədzadə Hüseyn</td>
+<td class="py-3 px-4 text-center">198</td>
+<td class="py-3 px-4 text-center">210</td>
+<td class="py-3 px-4 text-center">175</td>
+<td class="py-3 px-4 text-center font-medium">583</td>
+<td class="py-3 px-4 text-center">600</td>
+<td class="py-3 px-4 text-center"><span class="px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800">Keçmədi</span></td>
+</tr>
+<tr>
+<td class="py-3 px-4">3</td>
+<td class="py-3 px-4 font-medium">Cabbarova Lalə</td>
+<td class="py-3 px-4 text-center">225</td>
+<td class="py-3 px-4 text-center">195</td>
+<td class="py-3 px-4 text-center">205</td>
+<td class="py-3 px-4 text-center font-medium">625</td>
+<td class="py-3 px-4 text-center">580</td>
+<td class="py-3 px-4 text-center"><span class="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Keçdi</span></td>
+</tr>
+<tr>
+<td class="py-3 px-4">4</td>
+<td class="py-3 px-4 font-medium">Quluzadə Yunis</td>
+<td class="py-3 px-4 text-center">187</td>
+<td class="py-3 px-4 text-center">178</td>
+<td class="py-3 px-4 text-center">192</td>
+<td class="py-3 px-4 text-center font-medium">557</td>
+<td class="py-3 px-4 text-center">570</td>
+<td class="py-3 px-4 text-center"><span class="px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800">Keçmədi</span></td>
+</tr>
+<tr>
+<td class="py-3 px-4">5</td>
+<td class="py-3 px-4 font-medium">Quluzadə Lalə</td>
+<td class="py-3 px-4 text-center">210</td>
+<td class="py-3 px-4 text-center">215</td>
+<td class="py-3 px-4 text-center">190</td>
+<td class="py-3 px-4 text-center font-medium">615</td>
+<td class="py-3 px-4 text-center">590</td>
+<td class="py-3 px-4 text-center"><span class="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Keçdi</span></td>
+</tr>
+<tr>
+<td class="py-3 px-4">6</td>
+<td class="py-3 px-4 font-medium">Rəhimzadə Ümid</td>
+<td class="py-3 px-4 text-center">195</td>
+<td class="py-3 px-4 text-center">200</td>
+<td class="py-3 px-4 text-center">185</td>
+<td class="py-3 px-4 text-center font-medium">580</td>
+<td class="py-3 px-4 text-center">600</td>
+<td class="py-3 px-4 text-center"><span class="px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800">Keçmədi</span></td>
+</tr>
+<tr>
+<td class="py-3 px-4">7</td>
+<td class="py-3 px-4 font-medium">Həsənzadə Rza</td>
+<td class="py-3 px-4 text-center">180</td>
+<td class="py-3 px-4 text-center">220</td>
+<td class="py-3 px-4 text-center">230</td>
+<td class="py-3 px-4 text-center font-medium">630</td>
+<td class="py-3 px-4 text-center">510</td>
+<td class="py-3 px-4 text-center"><span class="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Keçdi</span></td>
+</tr>
+<tr>
+<td class="py-3 px-4">8</td>
+<td class="py-3 px-4 font-medium">Dadaşzadə Yusif</td>
+<td class="py-3 px-4 text-center">205</td>
+<td class="py-3 px-4 text-center">190</td>
+<td class="py-3 px-4 text-center">195</td>
+<td class="py-3 px-4 text-center font-medium">590</td>
+<td class="py-3 px-4 text-center">575</td>
+<td class="py-3 px-4 text-center"><span class="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Keçdi</span></td>
+</tr>
+<tr>
+<td class="py-3 px-4">9</td>
+<td class="py-3 px-4 font-medium">Rüstəmova Məleykə</td>
+<td class="py-3 px-4 text-center">215</td>
+<td class="py-3 px-4 text-center">205</td>
+<td class="py-3 px-4 text-center">210</td>
+<td class="py-3 px-4 text-center font-medium">630</td>
+<td class="py-3 px-4 text-center">600</td>
+<td class="py-3 px-4 text-center"><span class="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Keçdi</span></td>
+</tr>
+<tr>
+<td class="py-3 px-4">10</td>
+<td class="py-3 px-4 font-medium">İnətullayev Ramin</td>
+<td class="py-3 px-4 text-center">190</td>
+<td class="py-3 px-4 text-center">185</td>
+<td class="py-3 px-4 text-center">195</td>
+<td class="py-3 px-4 text-center font-medium">570</td>
+<td class="py-3 px-4 text-center">585</td>
+<td class="py-3 px-4 text-center"><span class="px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800">Keçmədi</span></td>
+</tr>
+<tr>
+<td class="py-3 px-4">11</td>
+<td class="py-3 px-4 font-medium">Feyzili Tərlan</td>
+<td class="py-3 px-4 text-center">220</td>
+<td class="py-3 px-4 text-center">225</td>
+<td class="py-3 px-4 text-center">215</td>
+<td class="py-3 px-4 text-center font-medium">660</td>
+<td class="py-3 px-4 text-center">575</td>
+<td class="py-3 px-4 text-center"><span class="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Keçdi</span></td>
+</tr>
+<tr>
+<td class="py-3 px-4">12</td>
+<td class="py-3 px-4 font-medium">İnətullayeva Leyla</td>
+<td class="py-3 px-4 text-center">200</td>
+<td class="py-3 px-4 text-center">195</td>
+<td class="py-3 px-4 text-center">190</td>
+<td class="py-3 px-4 text-center font-medium">585</td>
+<td class="py-3 px-4 text-center">570</td>
+<td class="py-3 px-4 text-center"><span class="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Keçdi</span></td>
+</tr>
+<tr>
+<td class="py-3 px-4">13</td>
+<td class="py-3 px-4 font-medium">Nəzərli Uğur</td>
+<td class="py-3 px-4 text-center">230</td>
+<td class="py-3 px-4 text-center">235</td>
+<td class="py-3 px-4 text-center">220</td>
+<td class="py-3 px-4 text-center font-medium">685</td>
+<td class="py-3 px-4 text-center">650</td>
+<td class="py-3 px-4 text-center"><span class="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Keçdi</span></td>
+</tr>
+<tr>
+<td class="py-3 px-4">14</td>
+<td class="py-3 px-4 font-medium">Ağayev İbrahim</td>
+<td class="py-3 px-4 text-center">185</td>
+<td class="py-3 px-4 text-center">190</td>
+<td class="py-3 px-4 text-center">195</td>
+<td class="py-3 px-4 text-center font-medium">570</td>
+<td class="py-3 px-4 text-center">590</td>
+<td class="py-3 px-4 text-center"><span class="px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800">Keçmədi</span></td>
+</tr>
+<tr>
+<td class="py-3 px-4">15</td>
+<td class="py-3 px-4 font-medium">Rufullayeva Səfurə</td>
+<td class="py-3 px-4 text-center">210</td>
+<td class="py-3 px-4 text-center">200</td>
+<td class="py-3 px-4 text-center">205</td>
+<td class="py-3 px-4 text-center font-medium">615</td>
+<td class="py-3 px-4 text-center">580</td>
+<td class="py-3 px-4 text-center"><span class="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">Keçdi</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Statistics Section -->
+<div class="bg-white rounded shadow-md overflow-hidden mb-6 statistics-section" style="display: none;">
+<div class="p-4 bg-primary text-white flex items-center justify-between">
+<h3 class="font-semibold">Statistika</h3>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-bar-chart-line ri-lg"></i>
+</div>
+</div>
+<div class="p-4">
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div>
+<h4 class="text-sm font-medium text-gray-700 mb-2">Hədəfi keçən/keçməyən şagirdlər</h4>
+<div id="statusChart" class="h-64"></div>
+</div>
+<div>
+<h4 class="text-sm font-medium text-gray-700 mb-2">Bal kateqoriyaları</h4>
+<div id="scoreChart" class="h-64"></div>
+</div>
+</div>
+<div class="mb-6">
+<h4 class="text-sm font-medium text-gray-700 mb-2">Şagirdlərin siyahısı</h4>
+<div class="overflow-x-auto">
+<table class="w-full">
+<thead>
+<tr>
+<th class="py-2 px-4 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ad Soyad</th>
+<th class="py-2 px-4 bg-gray-50 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Sınaq 1</th>
+<th class="py-2 px-4 bg-gray-50 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Buraxılış</th>
+<th class="py-2 px-4 bg-gray-50 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Blok</th>
+<th class="py-2 px-4 bg-gray-50 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Cəmi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="hover:bg-gray-50">
+<td class="py-2 px-4 text-sm">Nəzərli Uğur</td>
+<td class="py-2 px-4 text-sm text-center">230</td>
+<td class="py-2 px-4 text-sm text-center">235</td>
+<td class="py-2 px-4 text-sm text-center">220</td>
+<td class="py-2 px-4 text-sm text-center font-medium">685</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="py-2 px-4 text-sm">Feyzili Tərlan</td>
+<td class="py-2 px-4 text-sm text-center">220</td>
+<td class="py-2 px-4 text-sm text-center">225</td>
+<td class="py-2 px-4 text-sm text-center">215</td>
+<td class="py-2 px-4 text-sm text-center font-medium">660</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="py-2 px-4 text-sm">Həsənzadə Rza</td>
+<td class="py-2 px-4 text-sm text-center">180</td>
+<td class="py-2 px-4 text-sm text-center">220</td>
+<td class="py-2 px-4 text-sm text-center">230</td>
+<td class="py-2 px-4 text-sm text-center font-medium">630</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="py-2 px-4 text-sm">Rüstəmova Məleykə</td>
+<td class="py-2 px-4 text-sm text-center">215</td>
+<td class="py-2 px-4 text-sm text-center">205</td>
+<td class="py-2 px-4 text-sm text-center">210</td>
+<td class="py-2 px-4 text-sm text-center font-medium">630</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="py-2 px-4 text-sm">Cabbarova Lalə</td>
+<td class="py-2 px-4 text-sm text-center">225</td>
+<td class="py-2 px-4 text-sm text-center">195</td>
+<td class="py-2 px-4 text-sm text-center">205</td>
+<td class="py-2 px-4 text-sm text-center font-medium">625</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="py-2 px-4 text-sm">Rufullayeva Səfurə</td>
+<td class="py-2 px-4 text-sm text-center">210</td>
+<td class="py-2 px-4 text-sm text-center">200</td>
+<td class="py-2 px-4 text-sm text-center">205</td>
+<td class="py-2 px-4 text-sm text-center font-medium">615</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="py-2 px-4 text-sm">Quluzadə Lalə</td>
+<td class="py-2 px-4 text-sm text-center">210</td>
+<td class="py-2 px-4 text-sm text-center">215</td>
+<td class="py-2 px-4 text-sm text-center">190</td>
+<td class="py-2 px-4 text-sm text-center font-medium">615</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="py-2 px-4 text-sm">Dadaşzadə Yusif</td>
+<td class="py-2 px-4 text-sm text-center">205</td>
+<td class="py-2 px-4 text-sm text-center">190</td>
+<td class="py-2 px-4 text-sm text-center">195</td>
+<td class="py-2 px-4 text-sm text-center font-medium">590</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="py-2 px-4 text-sm">İnətullayeva Leyla</td>
+<td class="py-2 px-4 text-sm text-center">200</td>
+<td class="py-2 px-4 text-sm text-center">195</td>
+<td class="py-2 px-4 text-sm text-center">190</td>
+<td class="py-2 px-4 text-sm text-center font-medium">585</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="py-2 px-4 text-sm">Məmmədzadə Hüseyn</td>
+<td class="py-2 px-4 text-sm text-center">198</td>
+<td class="py-2 px-4 text-sm text-center">210</td>
+<td class="py-2 px-4 text-sm text-center">175</td>
+<td class="py-2 px-4 text-sm text-center font-medium">583</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="py-2 px-4 text-sm">Rəhimzadə Ümid</td>
+<td class="py-2 px-4 text-sm text-center">195</td>
+<td class="py-2 px-4 text-sm text-center">200</td>
+<td class="py-2 px-4 text-sm text-center">185</td>
+<td class="py-2 px-4 text-sm text-center font-medium">580</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="py-2 px-4 text-sm">İnətullayev Ramin</td>
+<td class="py-2 px-4 text-sm text-center">190</td>
+<td class="py-2 px-4 text-sm text-center">185</td>
+<td class="py-2 px-4 text-sm text-center">195</td>
+<td class="py-2 px-4 text-sm text-center font-medium">570</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="py-2 px-4 text-sm">Ağayev İbrahim</td>
+<td class="py-2 px-4 text-sm text-center">185</td>
+<td class="py-2 px-4 text-sm text-center">190</td>
+<td class="py-2 px-4 text-sm text-center">195</td>
+<td class="py-2 px-4 text-sm text-center font-medium">570</td>
+</tr>
+<tr class="hover:bg-gray-50">
+<td class="py-2 px-4 text-sm">Quluzadə Yunis</td>
+<td class="py-2 px-4 text-sm text-center">187</td>
+<td class="py-2 px-4 text-sm text-center">178</td>
+<td class="py-2 px-4 text-sm text-center">192</td>
+<td class="py-2 px-4 text-sm text-center font-medium">557</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<h4 class="text-sm font-medium text-gray-700 mb-2">Şagirdlərin bal müqayisəsi</h4>
+<div id="comparisonChart" class="h-72"></div>
+</div>
+</div>
+</div>
+</main>
+<!-- Tab Bar -->
+<nav class="fixed bottom-0 w-full bg-white border-t border-gray-200 shadow-md z-50">
+<div class="grid grid-cols-2 h-16">
+<a href="#" class="flex flex-col items-center justify-center text-primary" id="homeTab">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-home-4-line"></i>
+</div>
+<span class="text-xs mt-1">Ana səhifə</span>
+</a>
+<a href="#" class="flex flex-col items-center justify-center text-gray-500" id="statsTab">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-bar-chart-2-line"></i>
+</div>
+<span class="text-xs mt-1">Statistika</span>
+</a>
+</div>
+</nav>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const homeTab = document.getElementById('homeTab');
+const statsTab = document.getElementById('statsTab');
+const tableSection = document.querySelector('.table-container').parentElement;
+const statisticsSection = document.querySelector('.statistics-section');
+const examSelect = document.getElementById('examSelect');
+const averageScore = document.getElementById('averageScore');
+const examData = {
+'all': {
+'Əliyev Rəhim': 508,
+'Məmmədzadə Hüseyn': 497,
+'Cabbarova Lalə': 494,
+'Quluzadə Yunis': 493,
+'Quluzadə Lalə': 493,
+'Rəhimzadə Ümid': 452,
+'Həsənzadə Rza': 438,
+'Dadaşzadə Yusif': 418,
+'Rüstəmova Məleykə': 399,
+'İnətullayev Ramin': 370,
+'Feyzili Tərlan': 363,
+'İnətullayeva Leyla': 358,
+'Nəzərli Uğur': 324,
+'Ağayev İbrahim': 219,
+'Rufullayeva Səfurə': 219
+},
+'exam1': {
+'Əliyev Rəhim': 232,
+'Məmmədzadə Hüseyn': 263,
+'Cabbarova Lalə': 265,
+'Quluzadə Yunis': 185,
+'Quluzadə Lalə': 236,
+'Rəhimzadə Ümid': 157,
+'Həsənzadə Rza': 181,
+'Dadaşzadə Yusif': 208,
+'Rüstəmova Məleykə': 197,
+'İnətullayev Ramin': 223,
+'Feyzili Tərlan': 185,
+'İnətullayeva Leyla': 196,
+'Nəzərli Uğur': 141,
+'Ağayev İbrahim': 201,
+'Rufullayeva Səfurə': 237
+},
+'exam2': {
+'Əliyev Rəhim': 251,
+'Məmmədzadə Hüseyn': 234,
+'Cabbarova Lalə': 229,
+'Quluzadə Yunis': 215,
+'Quluzadə Lalə': 212,
+'Rəhimzadə Ümid': 214,
+'Həsənzadə Rza': 193,
+'Dadaşzadə Yusif': 210,
+'Rüstəmova Məleykə': 164,
+'İnətullayev Ramin': 206,
+'Feyzili Tərlan': 178,
+'İnətullayeva Leyla': 162,
+'Nəzərli Uğur': 183,
+'Ağayev İbrahim': 141,
+'Rufullayeva Səfurə': 0
+},
+'exam3': {
+'Əliyev Rəhim': 508,
+'Məmmədzadə Hüseyn': 497,
+'Cabbarova Lalə': 494,
+'Quluzadə Yunis': 493,
+'Quluzadə Lalə': 493,
+'Rəhimzadə Ümid': 452,
+'Həsənzadə Rza': 438,
+'Dadaşzadə Yusif': 418,
+'Rüstəmova Məleykə': 399,
+'İnətullayev Ramin': 370,
+'Feyzili Tərlan': 363,
+'İnətullayeva Leyla': 358,
+'Nəzərli Uğur': 324,
+'Ağayev İbrahim': 219,
+'Rufullayeva Səfurə': 219
+}
+};
+function updateTable(examType) {
+const tbody = document.querySelector('tbody');
+const rows = tbody.getElementsByTagName('tr');
+let total = 0;
+for(let i = 0; i < rows.length; i++) {
+const studentName = rows[i].cells[1].textContent;
+const score = examData[examType][studentName];
+total += score;
+if(examType === 'all') {
+rows[i].cells[2].textContent = examData['exam1'][studentName];
+rows[i].cells[3].textContent = examData['exam2'][studentName];
+rows[i].cells[4].textContent = examData['exam3'][studentName];
+rows[i].cells[5].textContent = score;
+} else {
+rows[i].cells[2].textContent = '-';
+rows[i].cells[3].textContent = '-';
+rows[i].cells[4].textContent = '-';
+rows[i].cells[5].textContent = score;
+}
+}
+averageScore.textContent = Math.round(total / rows.length);
+}
+examSelect.addEventListener('change', function() {
+updateTable(this.value);
+});
+homeTab.addEventListener('click', function(e) {
+e.preventDefault();
+homeTab.classList.remove('text-gray-500');
+homeTab.classList.add('text-primary');
+statsTab.classList.remove('text-primary');
+statsTab.classList.add('text-gray-500');
+tableSection.style.display = 'block';
+statisticsSection.style.display = 'none';
+});
+statsTab.addEventListener('click', function(e) {
+e.preventDefault();
+statsTab.classList.remove('text-gray-500');
+statsTab.classList.add('text-primary');
+homeTab.classList.remove('text-primary');
+homeTab.classList.add('text-gray-500');
+tableSection.style.display = 'none';
+statisticsSection.style.display = 'block';
+});
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Status Chart
+const statusChart = echarts.init(document.getElementById('statusChart'));
+statusChart.setOption({
+tooltip: {
+trigger: 'item',
+formatter: '{b}: {c} ({d}%)'
+},
+color: ['#10b981', '#ef4444'],
+series: [
+{
+name: 'Status',
+type: 'pie',
+radius: ['40%', '70%'],
+avoidLabelOverlap: false,
+itemStyle: {
+borderRadius: 10,
+borderColor: '#fff',
+borderWidth: 2
+},
+label: {
+show: true,
+formatter: '{b}: {d}%',
+position: 'outer',
+alignTo: 'none',
+bleedMargin: 5
+},
+emphasis: {
+label: {
+show: true,
+fontSize: '18',
+fontWeight: 'bold'
+}
+},
+labelLine: {
+show: true,
+length: 15,
+length2: 0,
+smooth: true
+},
+data: [
+{ value: 10, name: 'Hədəfi keçənlər (66.7%)' },
+{ value: 5, name: 'Hədəfi keçməyənlər (33.3%)' }
+]
+}
+]
+});
+// Score Categories Chart
+const scoreChart = echarts.init(document.getElementById('scoreChart'));
+scoreChart.setOption({
+tooltip: {
+trigger: 'axis',
+axisPointer: {
+type: 'shadow'
+}
+},
+grid: {
+left: '3%',
+right: '4%',
+bottom: '3%',
+containLabel: true
+},
+xAxis: [
+{
+type: 'category',
+data: ['500-550', '551-600', '601-650', '651-700'],
+axisTick: {
+alignWithLabel: true
+}
+}
+],
+yAxis: [
+{
+type: 'value'
+}
+],
+series: [
+{
+name: 'Şagird sayı',
+type: 'bar',
+barWidth: '60%',
+data: [
+{value: 2, itemStyle: {color: '#94a3b8'}},
+{value: 6, itemStyle: {color: '#60a5fa'}},
+{value: 5, itemStyle: {color: '#1e40af'}},
+{value: 2, itemStyle: {color: '#4f46e5'}}
+]
+}
+]
+});
+// Comparison Chart
+const comparisonChart = echarts.init(document.getElementById('comparisonChart'));
+comparisonChart.setOption({
+tooltip: {
+trigger: 'axis',
+axisPointer: {
+type: 'shadow'
+}
+},
+legend: {
+data: ['Cəmi bal', 'Hədəf']
+},
+grid: {
+left: '3%',
+right: '4%',
+bottom: '3%',
+containLabel: true
+},
+xAxis: {
+type: 'value',
+boundaryGap: [0, 0.01]
+},
+yAxis: {
+type: 'category',
+data: ['Əliyev R.', 'Məmmədzadə H.', 'Cabbarova L.', 'Quluzadə Y.', 'Quluzadə L.', 'Rəhimzadə Ü.', 'Həsənzadə R.', 'Dadaşzadə Y.', 'Rüstəmova M.', 'İnətullayev R.', 'Feyzili T.', 'İnətullayeva L.', 'Nəzərli U.', 'Ağayev İ.', 'Rufullayeva S.']
+},
+series: [
+{
+name: 'Cəmi bal',
+type: 'bar',
+data: [508, 497, 494, 493, 493, 452, 438, 418, 399, 370, 363, 358, 324, 219, 219],
+itemStyle: {
+color: '#1e40af'
+}
+},
+{
+name: 'Hədəf',
+type: 'bar',
+data: [508, 497, 494, 493, 493, 452, 438, 418, 399, 370, 363, 358, 324, 219, 219],
+itemStyle: {
+color: '#4f46e5'
+}
+}
+]
+});
+// Resize charts when window size changes
+window.addEventListener('resize', function() {
+statusChart.resize();
+scoreChart.resize();
+comparisonChart.resize();
+});
+});
+</script>
+</body>
+</html>
