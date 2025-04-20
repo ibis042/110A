@@ -670,48 +670,48 @@ document.addEventListener('DOMContentLoaded', function() {
 // Status Chart
 const statusChart = echarts.init(document.getElementById('statusChart'));
 statusChart.setOption({
-tooltip: {
-trigger: 'item',
-formatter: '{b}: {c} ({d}%)'
-},
-color: ['#10b981', '#ef4444'],
-series: [
-{
-name: 'Status',
-type: 'pie',
-radius: ['40%', '70%'],
-avoidLabelOverlap: false,
-itemStyle: {
-borderRadius: 10,
-borderColor: '#fff',
-borderWidth: 2
-},
-label: {
-show: true,
-formatter: '{b}: {d}%',
-position: 'outer',
-alignTo: 'none',
-bleedMargin: 5
-},
-emphasis: {
-label: {
-show: true,
-fontSize: '18',
-fontWeight: 'bold'
-}
-},
-labelLine: {
-show: true,
-length: 15,
-length2: 0,
-smooth: true
-},
-data: [
-{ value: 10, name: 'Hədəfi keçənlər (66.7%)' },
-{ value: 5, name: 'Hədəfi keçməyənlər (33.3%)' }
-]
-}
-]
+  tooltip: {
+    trigger: 'item',
+    formatter: '{b}: {c} ({d}%)'
+  },
+  color: ['#10b981', '#ef4444'],
+  series: [
+    {
+      name: 'Status',
+      type: 'pie',
+      radius: ['40%', '70%'],
+      avoidLabelOverlap: false,
+      itemStyle: {
+        borderRadius: 10,
+        borderColor: '#fff',
+        borderWidth: 2
+      },
+      label: {
+        show: true,
+        formatter: '{b}: {d}%',
+        position: 'outer',
+        alignTo: 'none',
+        bleedMargin: 5
+      },
+      emphasis: {
+        label: {
+          show: true,
+          fontSize: '18',
+          fontWeight: 'bold'
+        }
+      },
+      labelLine: {
+        show: true,
+        length: 15,
+        length2: 0,
+        smooth: true
+      },
+      data: [
+        { value: 0, name: 'Hədəfi keçənlər' },
+        { value: 15, name: 'Hədəfi keçməyənlər' }
+      ]
+    }
+  ]
 });
 // Score Categories Chart
 const scoreChart = echarts.init(document.getElementById('scoreChart'));
@@ -792,9 +792,9 @@ color: '#1e40af'
 }
 },
 {
-name: 'Hədəf',
-type: 'bar',
-data: [508, 497, 494, 493, 493, 452, 438, 418, 399, 370, 363, 358, 324, 219, 219],
+    name: 'Hədəf',
+  type: 'bar',
+  data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 itemStyle: {
 color: '#4f46e5'
 }
